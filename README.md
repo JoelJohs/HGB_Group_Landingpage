@@ -1,48 +1,46 @@
-# Astro Starter Kit: Basics
+# HGB Group Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+Esta es la landing page oficial de **HGB Group**, diseñada para proporcionar una experiencia visual atractiva y profesional. Este proyecto está construido con [Astro](https://astro.build/) y utiliza tecnologías modernas para garantizar un rendimiento óptimo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Características
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Diseño responsivo para dispositivos móviles, tabletas y escritorio.
+- Navegación clara y sencilla.
+- Sección de información sobre la empresa, contacto y ubicación.
+- Optimización para SEO y tiempos de carga rápidos.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🎨 Theme
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Paleta de Colores
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+| Color          | Código Hexadecimal | Uso sugerido                                            |
+| -------------- | ------------------ | ------------------------------------------------------- |
+| **Primario**   | #463f43            | bg-primary-500, encabezados, secciones destacadas       |
+| **Secundario** | #7a7276            | bg-secondary-500, bordes, separadores, sombras suaves   |
+| **Texto**      | #2d2a2c            | text-text-900, párrafos principales                     |
+| **Fondo**      | #f8f9fa            | bg-background-50, navbar (blanco suave), fondo general  |
+| **Accento**    | #836f75            | text-accent-500, iconos, estados hover, botones outline |
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📄 Uso
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Esta landing page puede ser utilizada para:
 
-## 👀 Want to learn more?
+- Presentar información sobre la empresa.
+- Mostrar servicios o productos destacados.
+- Proveer información de contacto y ubicación.
+- Generar leads a través de formularios.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 🛠️ Instalación y Configuración
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/hgb-group-landingpage.git
+   ```

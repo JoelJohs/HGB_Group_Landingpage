@@ -1,0 +1,126 @@
+---
+import hgbLogo from "../assets/hgb_logo.svg?url";
+import hamburgerIcon from "../assets/navbar/Hamburger.svg?url";
+import closeIcon from "../assets/navbar/Cross.svg?url";
+---
+
+<nav
+  class="bg-[var(--color-background-50)] text-[var(--color-text-900)] shadow fixed top-0 inset-x-0 z-50 h-20"
+>
+  <div class="container mx-auto flex items-center justify-between p-4 h-full">
+    <a href="/">
+      <img src={hgbLogo} alt="Logo HGB" class="h-10 drop-shadow-md" />
+    </a>
+
+    <!-- Botón para menú móvil -->
+    <button
+      id="menu-toggle"
+      class="relative block md:hidden w-6 h-6 focus:outline-none"
+    >
+      <img
+        id="icon-open"
+        src={hamburgerIcon}
+        alt="Abrir menú"
+        class="w-full h-full transition-opacity duration-300"
+      />
+      <img
+        id="icon-close"
+        src={closeIcon}
+        alt="Cerrar menú"
+        class="w-full h-full transition-opacity duration-300 opacity-0 absolute inset-0"
+      />
+    </button>
+
+    <!-- Menú para pantallas md+ -->
+    <ul class="hidden md:flex space-x-6 md:text-lg">
+      <li>
+        <a
+          href="#nosotros"
+          class="hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a
+          href="#acerca-de"
+          class="hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Acerca de
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contacto"
+          class="hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Contacto
+        </a>
+      </li>
+      <li>
+        <a
+          href="#ubicacion"
+          class="hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Ubicación
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Overlay menú móvil full‑screen -->
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed inset-x-0 top-[4rem] hidden bg-[var(--color-background-50)] z-50"
+  >
+    <ul class="flex flex-col justify-evenly h-[calc(100vh-4rem)]">
+      <li class="w-full">
+        <a
+          href="#nosotros"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Nosotros
+        </a>
+      </li>
+      <li class="w-full">
+        <a
+          href="#acerca-de"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Acerca de
+        </a>
+      </li>
+      <li class="w-full">
+        <a
+          href="#contacto"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Contacto
+        </a>
+      </li>
+      <li class="w-full">
+        <a
+          href="#ubicacion"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold"
+        >
+          Ubicación
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    if (typeof document !== "undefined") {
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      menuToggle?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("hidden");
+        iconOpen?.classList.toggle("opacity-0");
+        iconClose?.classList.toggle("opacity-0");
+      });
+    }
+  </script>
+</nav>

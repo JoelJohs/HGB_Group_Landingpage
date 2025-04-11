@@ -1,1 +1,40 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@theme {
+  /* === Primario: tono del logo HGB (#463f43) === */
+  --color-primary-50: #f2f1f2;
+  --color-primary-200: #c7c2c4;
+  --color-primary-500: #463f43;
+  --color-primary-700: #3a3439;
+  --color-primary-900: #2d262a;
+
+  /* === Secundario: gris medio para contrastes suaves === */
+  --color-secondary-50: #f3f2f3;
+  --color-secondary-200: #d1cfd1;
+  --color-secondary-500: #7a7276;
+  --color-secondary-700: #5e5659;
+  --color-secondary-900: #423c3f;
+
+  /* === Texto: desde gris oscuro a medio === */
+  --color-text-500: #6b6869;
+  --color-text-700: #4b484a;
+  --color-text-900: #2d2a2c;
+
+  /* === Fondo: blanco suave para navbar y secciones === */
+  --color-background-50: #f8f9fa; /* navbar, fondo general */
+  --color-background-100: #e9ebed; /* secciones secundarias */
+
+  /* === Accento: gris cálido para hover, iconos, etc. === */
+  --color-accent-50: #f5f1f2;
+  --color-accent-200: #c9bfc2;
+  --color-accent-500: #836f75;
+  --color-accent-700: #6e5b61;
+  --color-accent-900: #593f45;
+}
+
+/* === Tipografía === */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
