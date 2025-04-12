@@ -1,0 +1,282 @@
+---
+import { Image } from "astro:assets";
+import hgbLogo from "../assets/about/hgb_hero_logo.png";
+import member1 from "../assets/about/members/breaker_electric.png";
+import member2 from "../assets/about/members/fuse_store.png";
+import member3 from "../assets/about/members/gateway.png";
+import member4 from "../assets/about/members/abv.svg";
+import member5 from "../assets/about/members/light_n.png";
+import member6 from "../assets/about/members/odosa.png";
+import member7 from "../assets/about/members/surtidora.png";
+import historia from "../assets/about/historia_experiencia.jpeg";
+---
+
+<section
+  id="nosotros"
+  class="relative py-12 px-4 bg-[var(--color-background-50)]"
+>
+  <div class="container mx-auto">
+    <h2
+      class="about-title font-bold text-[var(--color-text-900)] mb-6 text-center"
+    >
+      Nosotros
+    </h2>
+    <div class="relative overflow-hidden">
+      <div
+        id="carousel"
+        class="flex transition-transform duration-500 snap-x snap-mandatory"
+      >
+        <!-- Slide: ¿Quiénes somos? -->
+        <div class="flex-none w-full snap-center">
+          <div class="p-4">
+            <div
+              class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center"
+            >
+              <div class="lg:w-1/2">
+                <h3
+                  class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+                >
+                  ¿Quiénes somos?
+                </h3>
+                <p class="about-text text-[var(--color-text-700)]">
+                  HGB Group está conformado por siete empresas que ofrecen
+                  soluciones eléctricas e iluminación. Operamos con marcas de
+                  distribución directa, garantizando soporte técnico eficiente y
+                  personalizado a nuestros clientes.
+                </p>
+              </div>
+              <div class="lg:w-1/2 mt-4 lg:mt-0 lg:ml-4">
+                <Image
+                  src={hgbLogo}
+                  alt="¿Quiénes somos?"
+                  class="w-full h-auto rounded shadow"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide: Miembros -->
+        <div class="flex-none w-full snap-center">
+          <div class="p-4">
+            <div class="p-8 bg-white shadow rounded">
+              <h3
+                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-4"
+              >
+                Miembros
+              </h3>
+
+              <!-- Mobile: 1 columna -->
+              <div class="lg:hidden space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member1}
+                      alt="Miembro 1"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member2}
+                      alt="Miembro 2"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member3}
+                      alt="Miembro 3"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member4}
+                      alt="Miembro 4"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member5}
+                      alt="Miembro 5"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  >
+                    <Image
+                      src={member6}
+                      alt="Miembro 6"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg col-span-2"
+                  >
+                    <Image
+                      src={member7}
+                      alt="Miembro 7"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Desktop: diseño optimizado -->
+              <div class="hidden lg:block">
+                <div class="flex flex-wrap justify-between gap-4">
+                  <!-- Rectangulares -->
+                  <div
+                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member1}
+                      alt="Miembro 1"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member2}
+                      alt="Miembro 2"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member3}
+                      alt="Miembro 3"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  <!-- Cuadrados -->
+                  <div
+                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member4}
+                      alt="Miembro 4"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member5}
+                      alt="Miembro 5"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member6}
+                      alt="Miembro 6"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
+                  >
+                    <Image
+                      src={member7}
+                      alt="Miembro 7"
+                      class="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide: Historia -->
+        <div class="flex-none w-full snap-center">
+          <div class="p-4">
+            <div
+              class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center"
+            >
+              <div class="lg:w-1/2">
+                <h3
+                  class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+                >
+                  Historia y experiencia
+                </h3>
+                <p class="about-text text-[var(--color-text-700)]">
+                  Con 37 años en la industria eléctrica, HGB ha trabajado en
+                  sectores públicos y privados, incluyendo retail, industria,
+                  hospitales y más. Nuestra trayectoria respalda la calidad y
+                  confianza de nuestros servicios.
+                </p>
+              </div>
+              <div class="lg:w-1/2 mt-4 lg:mt-0 lg:ml-4">
+                <Image
+                  src={historia}
+                  alt="Historia"
+                  class="w-full h-auto rounded shadow"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      id="prev"
+      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full ml-2"
+      >&#9664;</button
+    >
+    <button
+      id="next"
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full mr-2"
+      >&#9654;</button
+    >
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  const carousel = document.getElementById("carousel");
+  if (carousel) {
+    const slides = carousel.children;
+    const totalSlides = slides.length;
+    document.getElementById("next")?.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+    document.getElementById("prev")?.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+  }
+</script>
+
+<style>
+  .about-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .about-subtitle {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .about-text {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+</style>

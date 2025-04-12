@@ -1,6 +1,7 @@
 ---
 import hgbHeroBanner from "../assets/herobanner/hero_image.jpg?url";
-import hgbHeroLogo from "../assets/herobanner/hgb_hero_white_logo.png?url";
+import hgbHeroLogo from "../assets/herobanner/hgb_hero_white_logo.png";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -8,10 +9,11 @@ import hgbHeroLogo from "../assets/herobanner/hgb_hero_white_logo.png?url";
   style={`background-image: url(${hgbHeroBanner});`}
 >
   <div class="flex flex-col items-center justify-center h-full dynamic-margins">
-    <img
+    <Image
       src={hgbHeroLogo}
       alt="Logo de la empresa"
       class="logo mb-4 drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]"
+      loading={"lazy"}
     />
     <h1 class="heading font-bold text-center">
       Soluciones eléctricas y de iluminación
