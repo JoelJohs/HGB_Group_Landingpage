@@ -1,0 +1,43 @@
+---
+import hgbHeroBanner from "../assets/herobanner/hero_image.jpg?url";
+import hgbHeroLogo from "../assets/herobanner/hgb_hero_white_logo.png?url";
+---
+
+<section
+  class="w-full h-screen bg-cover bg-center top-20 flex flex-col items-start justify-start text-left text-white"
+  style={`background-image: url(${hgbHeroBanner});`}
+>
+  <div class="flex flex-col items-center justify-center h-full dynamic-margins">
+    <img
+      src={hgbHeroLogo}
+      alt="Logo de la empresa"
+      class="logo mb-4 drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]"
+    />
+    <h1 class="heading font-bold text-center">
+      Soluciones eléctricas y de iluminación
+    </h1>
+    <p class="paragraph mt-2 text-center">
+      Expertos en Equipos y proyectos Eléctricos en México y Centroamérica
+    </p>
+  </div>
+</section>
+
+<style>
+  .logo {
+    width: clamp(12rem, 20vw, 20rem);
+  }
+
+  .heading {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-shadow: 0 0 5px black;
+  }
+
+  .paragraph {
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    text-shadow: 0 0 5px black;
+  }
+
+  .dynamic-margins {
+    margin-left: clamp(0rem, 5vw, 8rem);
+  }
+</style>

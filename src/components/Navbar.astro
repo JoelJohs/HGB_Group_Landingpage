@@ -5,17 +5,21 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
 ---
 
 <nav
-  class="bg-[var(--color-background-50)] text-[var(--color-text-900)] shadow fixed top-0 inset-x-0 z-50 h-20"
+  class="bg-[var(--color-background-50)] text-[var(--color-text-900)] shadow fixed top-0 inset-x-0 z-50 h-20 navbar-height"
 >
   <div class="container mx-auto flex items-center justify-between p-4 h-full">
     <a href="/">
-      <img src={hgbLogo} alt="Logo HGB" class="h-10 drop-shadow-md" />
+      <img
+        src={hgbLogo}
+        alt="Logo HGB"
+        class="h-10 md:h-12 hover:h-14 drop-shadow-md"
+      />
     </a>
 
     <!-- Botón para menú móvil -->
     <button
       id="menu-toggle"
-      class="relative block md:hidden w-6 h-6 focus:outline-none"
+      class="relative block md:hidden w-8 h-8 focus:outline-none"
     >
       <img
         id="icon-open"
@@ -32,7 +36,7 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
     </button>
 
     <!-- Menú para pantallas md+ -->
-    <ul class="hidden md:flex space-x-6 md:text-lg">
+    <ul class="hidden md:flex space-x-6 md:text-lg lg:text-xl">
       <li>
         <a
           href="#nosotros"

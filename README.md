@@ -1,6 +1,6 @@
 # HGB Group Landing Page
 
-Esta es la landing page oficial de **HGB Group**, diseñada para proporcionar una experiencia visual atractiva y profesional. Este proyecto está construido con [Astro](https://astro.build/) y utiliza tecnologías modernas para garantizar un rendimiento óptimo.
+Landing page oficial de **HGB Group**. Este proyecto está construido con [Astro](https://astro.build/) y está diseñado para priorizar la rapidez y ligereza.
 
 ---
 
@@ -9,7 +9,7 @@ Esta es la landing page oficial de **HGB Group**, diseñada para proporcionar un
 - Diseño responsivo para dispositivos móviles, tabletas y escritorio.
 - Navegación clara y sencilla.
 - Sección de información sobre la empresa, contacto y ubicación.
-- Optimización para SEO y tiempos de carga rápidos.
+- Optimización tiempos de carga rápidos.
 
 ---
 
@@ -26,21 +26,3 @@ Esta es la landing page oficial de **HGB Group**, diseñada para proporcionar un
 | **Accento**    | #836f75            | text-accent-500, iconos, estados hover, botones outline |
 
 ---
-
-## 📄 Uso
-
-Esta landing page puede ser utilizada para:
-
-- Presentar información sobre la empresa.
-- Mostrar servicios o productos destacados.
-- Proveer información de contacto y ubicación.
-- Generar leads a través de formularios.
-
----
-
-## 🛠️ Instalación y Configuración
-
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/hgb-group-landingpage.git
-   ```
