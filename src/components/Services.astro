@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import solucionesImg from "../assets/services/soluciones.jpg";
+import electrificacionImg from "../assets/services/servicios.jpg";
+import iluminacionImg from "../assets/services/aplicaciones.jpeg";
+---
+
+<section
+  id="servicios"
+  class="relative py-12 px-4 bg-[var(--color-background-50)]"
+>
+  <div class="container mx-auto">
+    <h2
+      class="services-title font-bold text-[var(--color-text-900)] mb-6 text-center"
+    >
+      Servicios
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card: Soluciones Eléctricas -->
+      <div class="bg-white shadow rounded p-4">
+        <Image
+          src={solucionesImg}
+          alt="Soluciones eléctricas"
+          class="w-full h-64 object-cover rounded shadow mb-4"
+        />
+        <h3
+          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+        >
+          Soluciones Eléctricas
+        </h3>
+        <p class="text-[var(--color-text-700)]">
+          Ofrecemos productos como tableros de distribución, arranques y bancos
+          de capacitores, asegurando la electrificación segura y eficiente de
+          cualquier espacio. Cada solución está diseñada para optimizar el
+          rendimiento eléctrico y cumplir con normativas específicas.
+        </p>
+      </div>
+
+      <!-- Card: Servicios de electrificación -->
+      <div class="bg-white shadow rounded p-4">
+        <Image
+          src={electrificacionImg}
+          alt="Servicios de electrificación"
+          class="w-full h-64 object-cover rounded shadow mb-4"
+        />
+        <h3
+          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+        >
+          Servicios de electrificación
+        </h3>
+        <p class="text-[var(--color-text-700)]">
+          Instalaciones profesionales y mantenimiento eléctrico integral para
+          proyectos residenciales, comerciales e industriales, garantizando
+          seguridad y eficiencia energética.
+        </p>
+      </div>
+
+      <!-- Card: Aplicaciones de iluminación -->
+      <div class="bg-white shadow rounded p-4">
+        <Image
+          src={iluminacionImg}
+          alt="Aplicaciones de iluminación"
+          class="w-full h-64 object-cover rounded shadow mb-4"
+        />
+        <h3
+          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+        >
+          Aplicaciones de iluminación
+        </h3>
+        <p class="text-[var(--color-text-700)]">
+          Diseño e implementación de sistemas de iluminación eficientes con
+          tecnología LED de última generación, adaptados a las necesidades
+          específicas de cada espacio.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .service-subtitle {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .text-[var(--color-text-700)] {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+</style>
