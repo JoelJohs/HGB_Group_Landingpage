@@ -1,4 +1,4 @@
----
+---  
 import projectsData from "../data/projects.json";
 
 import totalplayImage from "../assets/projects/totalplay.jpeg";
@@ -12,7 +12,6 @@ import chedrauiImage from "../assets/projects/chedraui.jpg";
 import equinixImage from "../assets/projects/equinix.jpg";
 import maxitunelImage from "../assets/projects/maxitunelacapulco.jpeg";
 
-// Crea una asociación entre el título del proyecto y la imagen importada.
 const images = {
   "Total Play": totalplayImage,
   Amazon: amazonImage,
@@ -26,10 +25,9 @@ const images = {
   "Maxitunel Acapulco": maxitunelImage,
 };
 
-// Recorre el JSON y reemplaza la propiedad image con la imagen importada.
-const projects = projectsData.map((project) => ({
-  ...project,
-  image: images[project.title as keyof typeof images],
+const projects = projectsData.map((p) => ({
+  ...p,
+  image: images[p.title as keyof typeof images],
 }));
 ---
 
@@ -45,39 +43,41 @@ const projects = projectsData.map((project) => ({
       Proyectos Destacados
     </h2>
     <div class="relative">
-      <!-- Slides wrapper con padding-bottom -->
+      <!-- Slides wrapper con más padding-bottom -->
       <div
         id="projects-carousel"
-        class="flex transition-transform duration-500 pb-8"
+        class="flex transition-transform duration-500 pb-16"
       >
-        {
-          projects.map((project) => (
-            <div class="slide flex-none w-full p-4">
-              <div class="bg-white shadow rounded-[5px] border border-gray-200 overflow-hidden h-full md:h-80">
-                <div class="flex flex-col md:flex-row h-full">
-                  <div class="w-full md:w-1/2 md:max-w-md mx-auto overflow-hidden h-full">
-                    <img
-                      src={project.image.src}
-                      alt={project.alt}
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div class="w-full md:w-1/2 px-6 py-8 flex flex-col justify-center">
-                    <h3
-                      class="font-semibold text-[var(--color-primary-500)] mb-2"
-                      style="font-size: clamp(1.5rem, 4vw, 2rem);"
-                    >
-                      {project.title}
-                    </h3>
-                    <p class="text-[var(--color-text-700)]">
-                      {project.description}
-                    </p>
-                  </div>
+        {projects.map((project) => (
+          <div class="slide flex-none w-full p-4">
+            <div
+              class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row h-full md:h-80 lg:h-[450px] w-full"
+            >
+              <!-- Imagen ocupa la mitad en md+ y full-width en móvil -->
+              <div class="md:w-1/2 flex items-center justify-center h-full">
+                <div class="w-full h-full">
+                  <img
+                    src={project.image.src}
+                    alt={project.alt}
+                    class="w-full h-full object-cover rounded-[5px] shadow-lg"
+                  />
                 </div>
               </div>
+              <!-- Texto centrado y con padding lateral en md+ -->
+              <div class="md:w-1/2 flex flex-col justify-center mt-6 md:mt-0 md:pl-6">
+                <h3
+                  class="font-semibold text-[var(--color-primary-500)] mb-2"
+                  style="font-size: clamp(1.5rem, 4vw, 2rem);"
+                >
+                  {project.title}
+                </h3>
+                <p class="text-[var(--color-text-700)]">
+                  {project.description}
+                </p>
+              </div>
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
 
       <!-- Controles -->
@@ -94,28 +94,14 @@ const projects = projectsData.map((project) => ({
         &#9654;
       </button>
 
-      <!-- Indicadores más abajo y más grandes -->
+      <!-- Indicadores con espacio suficiente debajo -->
       <div
         id="projects-indicators"
-        class="absolute bottom-14 md:-bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-2"
-      >
-      </div>
+        class="absolute bottom-0 lg:bottom-22 left-1/2 transform -translate-x-1/2 flex space-x-2"
+      ></div>
     </div>
   </div>
 </section>
-
-<style>
-  #proyectos h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-  #proyectos h3 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
-  #proyectos p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    line-height: 1.6;
-  }
-</style>
 
 <script type="module">
   const carousel = document.getElementById("projects-carousel");
@@ -139,11 +125,8 @@ const projects = projectsData.map((project) => ({
   function update() {
     carousel.style.transform = `translateX(-${current * 100}%)`;
     indicators.querySelectorAll("button").forEach((btn, idx) => {
-      if (idx === current) {
-        btn.classList.replace("bg-gray-300", "bg-primary-500");
-      } else {
-        btn.classList.replace("bg-primary-500", "bg-gray-300");
-      }
+      btn.classList.toggle("bg-primary-500", idx === current);
+      btn.classList.toggle("bg-gray-300", idx !== current);
     });
   }
 
@@ -153,7 +136,22 @@ const projects = projectsData.map((project) => ({
   }
 
   nextBtn.addEventListener("click", () => goTo((current + 1) % total));
-  prevBtn.addEventListener("click", () => goTo((current - 1 + total) % total));
+  prevBtn.addEventListener("click", () =>
+    goTo((current - 1 + total) % total)
+  );
 
   update();
 </script>
+
+<style>
+  #proyectos h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  #proyectos h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  #proyectos p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+</style>
