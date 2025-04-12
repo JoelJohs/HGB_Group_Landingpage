@@ -30,10 +30,10 @@ import historia from "../assets/about/historia_experiencia.jpeg";
         <!-- Slide 1: ¿Quiénes somos? -->
         <div class="slide flex-none w-full p-4">
           <div
-            class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center lg:gap-8 md:h-[450px]"
+            class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row items-center md:gap-8 md:h-[450px]"
           >
             <!-- Texto centrado verticalmente -->
-            <div class="lg:w-1/2 flex flex-col justify-center">
+            <div class="md:w-1/2 flex flex-col justify-center">
               <h3
                 class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
               >
@@ -48,7 +48,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
             </div>
             <!-- Imagen en contenedor full‑height y centrada -->
             <div
-              class="lg:w-1/2 mt-4 lg:mt-0 flex items-center justify-center h-full"
+              class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
             >
               <div class="w-full max-w-[350px] h-full">
                 <Image
@@ -72,10 +72,10 @@ import historia from "../assets/about/historia_experiencia.jpeg";
               Miembros
             </h3>
             <!-- Mobile -->
-            <div class="lg:hidden space-y-4 w-full">
+            <div class="md:hidden space-y-4 w-full">
               <div class="grid grid-cols-2 gap-4">
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member1}
@@ -84,7 +84,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member2}
@@ -93,7 +93,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member3}
@@ -102,7 +102,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member4}
@@ -111,7 +111,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member5}
@@ -120,7 +120,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
                 >
                   <Image
                     src={member6}
@@ -129,7 +129,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
                   />
                 </div>
                 <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg col-span-2"
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow col-span-2"
                 >
                   <Image
                     src={member7}
@@ -140,51 +140,65 @@ import historia from "../assets/about/historia_experiencia.jpeg";
               </div>
             </div>
             <!-- Desktop -->
-            <div class="hidden lg:block w-full">
+            <div class="hidden md:block w-full">
               <div class="flex flex-wrap justify-between gap-4">
-                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member1}
                     alt="Miembro 1"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member2}
                     alt="Miembro 2"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member3}
                     alt="Miembro 3"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member4}
                     alt="Miembro 4"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member5}
                     alt="Miembro 5"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member6}
                     alt="Miembro 6"
                     class="w-full h-full object-contain"
                   />
                 </div>
-                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                <div
+                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+                >
                   <Image
                     src={member7}
                     alt="Miembro 7"
@@ -199,9 +213,9 @@ import historia from "../assets/about/historia_experiencia.jpeg";
         <!-- Slide 3: Historia -->
         <div class="slide flex-none w-full p-4">
           <div
-            class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center md:h-[450px]"
+            class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row items-center md:h-[450px]"
           >
-            <div class="lg:w-1/2 flex flex-col justify-center">
+            <div class="md:w-1/2 flex flex-col justify-center">
               <h3
                 class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
               >
@@ -215,7 +229,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
               </p>
             </div>
             <div
-              class="lg:w-1/2 mt-4 lg:mt-0 flex items-center justify-center h-full"
+              class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
             >
               <div class="w-full max-w-[350px] h-full">
                 <Image
@@ -246,7 +260,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
       <!-- Indicadores -->
       <div
         id="about-indicators"
-        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
+        class="absolute bottom-14 md:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2"
       >
       </div>
     </div>
