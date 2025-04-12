@@ -13,7 +13,7 @@ import historia from "../assets/about/historia_experiencia.jpeg";
 
 <section
   id="nosotros"
-  class="relative py-12 px-4 bg-[var(--color-background-50)]"
+  class="relative py-12 px-4 bg-[var(--color-background-50)] overflow-hidden"
 >
   <div class="container mx-auto">
     <h2
@@ -21,252 +21,276 @@ import historia from "../assets/about/historia_experiencia.jpeg";
     >
       Nosotros
     </h2>
-    <div class="relative overflow-hidden">
+    <div class="relative">
+      <!-- Slides wrapper con padding-bottom -->
       <div
-        id="carousel"
-        class="flex transition-transform duration-500 snap-x snap-mandatory"
+        id="about-carousel"
+        class="flex transition-transform duration-500 pb-8"
       >
-        <!-- Slide: ¿Quiénes somos? -->
-        <div class="flex-none w-full snap-center">
-          <div class="p-4">
+        <!-- Slide 1: ¿Quiénes somos? -->
+        <div class="slide flex-none w-full p-4">
+          <div
+            class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center lg:gap-8 md:h-[450px]"
+          >
+            <!-- Texto centrado verticalmente -->
+            <div class="lg:w-1/2 flex flex-col justify-center">
+              <h3
+                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+              >
+                ¿Quiénes somos?
+              </h3>
+              <p class="about-text text-[var(--color-text-700)]">
+                HGB Group está conformado por siete empresas que ofrecen
+                soluciones eléctricas e iluminación. Operamos con marcas de
+                distribución directa, garantizando soporte técnico eficiente y
+                personalizado a nuestros clientes.
+              </p>
+            </div>
+            <!-- Imagen en contenedor full‑height y centrada -->
             <div
-              class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center"
+              class="lg:w-1/2 mt-4 lg:mt-0 flex items-center justify-center h-full"
             >
-              <div class="lg:w-1/2">
-                <h3
-                  class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-                >
-                  ¿Quiénes somos?
-                </h3>
-                <p class="about-text text-[var(--color-text-700)]">
-                  HGB Group está conformado por siete empresas que ofrecen
-                  soluciones eléctricas e iluminación. Operamos con marcas de
-                  distribución directa, garantizando soporte técnico eficiente y
-                  personalizado a nuestros clientes.
-                </p>
-              </div>
-              <div class="lg:w-1/2 mt-4 lg:mt-0 lg:ml-4">
+              <div class="w-full max-w-[350px] h-full">
                 <Image
                   src={hgbLogo}
                   alt="¿Quiénes somos?"
-                  class="w-full h-auto rounded shadow"
+                  class="w-full h-full object-contain"
                 />
               </div>
             </div>
           </div>
         </div>
-        <!-- Slide: Miembros -->
-        <div class="flex-none w-full snap-center">
-          <div class="p-4">
-            <div class="p-8 bg-white shadow rounded">
-              <h3
-                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-4"
-              >
-                Miembros
-              </h3>
 
-              <!-- Mobile: 1 columna -->
-              <div class="lg:hidden space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member1}
-                      alt="Miembro 1"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member2}
-                      alt="Miembro 2"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member3}
-                      alt="Miembro 3"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member4}
-                      alt="Miembro 4"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member5}
-                      alt="Miembro 5"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
-                  >
-                    <Image
-                      src={member6}
-                      alt="Miembro 6"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg col-span-2"
-                  >
-                    <Image
-                      src={member7}
-                      alt="Miembro 7"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
+        <!-- Slide 2: Miembros -->
+        <div class="slide flex-none w-full p-4">
+          <div
+            class="p-8 bg-white shadow rounded flex flex-col items-center md:h-[450px]"
+          >
+            <h3
+              class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-4 text-center"
+            >
+              Miembros
+            </h3>
+            <!-- Mobile -->
+            <div class="lg:hidden space-y-4 w-full">
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member1}
+                    alt="Miembro 1"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member2}
+                    alt="Miembro 2"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member3}
+                    alt="Miembro 3"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member4}
+                    alt="Miembro 4"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member5}
+                    alt="Miembro 5"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg"
+                >
+                  <Image
+                    src={member6}
+                    alt="Miembro 6"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-lg col-span-2"
+                >
+                  <Image
+                    src={member7}
+                    alt="Miembro 7"
+                    class="w-full h-full object-contain"
+                  />
                 </div>
               </div>
-
-              <!-- Desktop: diseño optimizado -->
-              <div class="hidden lg:block">
-                <div class="flex flex-wrap justify-between gap-4">
-                  <!-- Rectangulares -->
-                  <div
-                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member1}
-                      alt="Miembro 1"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member2}
-                      alt="Miembro 2"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member3}
-                      alt="Miembro 3"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-
-                  <!-- Cuadrados -->
-                  <div
-                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member4}
-                      alt="Miembro 4"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member5}
-                      alt="Miembro 5"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member6}
-                      alt="Miembro 6"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
-                  <div
-                    class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4"
-                  >
-                    <Image
-                      src={member7}
-                      alt="Miembro 7"
-                      class="w-full h-full object-contain"
-                    />
-                  </div>
+            </div>
+            <!-- Desktop -->
+            <div class="hidden lg:block w-full">
+              <div class="flex flex-wrap justify-between gap-4">
+                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member1}
+                    alt="Miembro 1"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member2}
+                    alt="Miembro 2"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member3}
+                    alt="Miembro 3"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member4}
+                    alt="Miembro 4"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member5}
+                    alt="Miembro 5"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member6}
+                    alt="Miembro 6"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-lg p-4">
+                  <Image
+                    src={member7}
+                    alt="Miembro 7"
+                    class="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Slide: Historia -->
-        <div class="flex-none w-full snap-center">
-          <div class="p-4">
-            <div    
-              class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center"
+
+        <!-- Slide 3: Historia -->
+        <div class="slide flex-none w-full p-4">
+          <div
+            class="p-8 bg-white shadow rounded flex flex-col lg:flex-row items-center md:h-[450px]"
+          >
+            <div class="lg:w-1/2 flex flex-col justify-center">
+              <h3
+                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+              >
+                Historia y experiencia
+              </h3>
+              <p class="about-text text-[var(--color-text-700)]">
+                Con 37 años en la industria eléctrica, HGB ha trabajado en
+                sectores públicos y privados, incluyendo retail, industria,
+                hospitales y más. Nuestra trayectoria respalda la calidad y
+                confianza de nuestros servicios.
+              </p>
+            </div>
+            <div
+              class="lg:w-1/2 mt-4 lg:mt-0 flex items-center justify-center h-full"
             >
-              <div class="lg:w-1/2">
-                <h3
-                  class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-                >
-                  Historia y experiencia
-                </h3>
-                <p class="about-text text-[var(--color-text-700)]">
-                  Con 37 años en la industria eléctrica, HGB ha trabajado en
-                  sectores públicos y privados, incluyendo retail, industria,
-                  hospitales y más. Nuestra trayectoria respalda la calidad y
-                  confianza de nuestros servicios.
-                </p>
-              </div>
-              <div class="lg:w-1/2 mt-4 lg:mt-0 lg:ml-4">
+              <div class="w-full max-w-[350px] h-full">
                 <Image
                   src={historia}
                   alt="Historia"
-                  class="w-full h-auto rounded shadow"
+                  class="w-full h-full object-contain"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Controles -->
+      <button
+        id="about-prev"
+        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full"
+      >
+        &#9664;
+      </button>
+      <button
+        id="about-next"
+        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full"
+      >
+        &#9654;
+      </button>
+
+      <!-- Indicadores -->
+      <div
+        id="about-indicators"
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
+      >
+      </div>
     </div>
-    <button
-      id="prev"
-      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full ml-2"
-      >&#9664;</button
-    >
-    <button
-      id="next"
-      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[var(--color-primary-500)] text-white p-2 rounded-full mr-2"
-      >&#9654;</button
-    >
   </div>
 </section>
 
-<script>
-  let currentSlide = 0;
-  const carousel = document.getElementById("carousel");
-  if (carousel) {
-    const slides = carousel.children;
-    const totalSlides = slides.length;
-    document.getElementById("next")?.addEventListener("click", () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    });
-    document.getElementById("prev")?.addEventListener("click", () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+<script type="module">
+  const carousel = document.getElementById("about-carousel");
+  const slides = carousel.querySelectorAll(".slide");
+  const total = slides.length;
+  let current = 0;
+  const nextBtn = document.getElementById("about-next");
+  const prevBtn = document.getElementById("about-prev");
+  const indicators = document.getElementById("about-indicators");
+
+  slides.forEach((_, idx) => {
+    const dot = document.createElement("button");
+    dot.className =
+      "w-4 h-4 rounded-full bg-gray-300 transition-colors duration-300";
+    dot.dataset.index = idx;
+    dot.addEventListener("click", () => goTo(idx));
+    indicators.appendChild(dot);
+  });
+
+  function update() {
+    carousel.style.transform = `translateX(-${current * 100}%)`;
+    indicators.querySelectorAll("button").forEach((btn, idx) => {
+      if (idx === current) {
+        btn.classList.replace("bg-gray-300", "bg-primary-500");
+      } else {
+        btn.classList.replace("bg-primary-500", "bg-gray-300");
+      }
     });
   }
+
+  function goTo(idx) {
+    current = idx;
+    update();
+  }
+
+  nextBtn.addEventListener("click", () => goTo((current + 1) % total));
+  prevBtn.addEventListener("click", () => goTo((current - 1 + total) % total));
+
+  update();
 </script>
 
 <style>

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Total Play",
+    "description": "Para Total Play, HGB Group a través de Breaker Electric suministró luminarias y brindó apoyo en estudios fotométricos, asegurando niveles lumínicos óptimos en sus instalaciones. Este proyecto resalta la importancia de la iluminación adecuada en la experiencia del cliente y el rendimiento operativo.",
+    "image": "../assets/projects/totalplay.jpeg",
+    "alt": "Imagen del Proyecto Total Play"
+  },
+  {
+    "title": "Amazon",
+    "description": "En 2020, HGB Group, apoyó a Amazon en la Ciudad de México con el suministro de luminarias. Este proyecto demuestra nuestra capacidad de adaptar soluciones a las necesidades específicas de grandes empresas del sector retail.",
+    "image": "../assets/projects/amazon.jpg",
+    "alt": "Imagen del Proyecto Amazon"
+  },
+  {
+    "title": "IKEA",
+    "description": "HGB Group, apoyó a IKEA en la Ciudad de México y Guadalajara con el suministro de tableros de distribución y control. Este proyecto refleja nuestra experiencia en ofrecer soluciones personalizadas para empresas líderes del sector retail.",
+    "image": "../assets/projects/ikea.jpg",
+    "alt": "Imagen del Proyecto IKEA"
+  },
+  {
+    "title": "PRODEMEX",
+    "description": "En 2020, HGB Group, suministró cables para la conexión de equipo y control a PRODEMEX. Este proyecto demuestra nuestra capacidad para ofrecer soluciones eficientes y personalizadas para el sector industrial.",
+    "image": "../assets/projects/prodemex.jpg",
+    "alt": "Imagen del Proyecto PRODEMEX"
+  },
+  {
+    "title": "Johnson & Johnson",
+    "description": "HGB Group, apoyó a Johnson & Johnson con el suministro de luminarias y la ejecución de estudios fotométricos para garantizar los niveles lumínicos óptimos. Este proyecto refleja nuestra habilidad para gestionar proyectos de iluminación a gran escala con precisión.",
+    "image": "../assets/projects/johnsonjohnson.jpg",
+    "alt": "Imagen del Proyecto Johnson & Johnson"
+  },
+  {
+    "title": "Hospital General, Bahía de Banderas",
+    "description": "HGB Group suministró materiales y equipo eléctrico para la construcción del Hospital General en Nayarit, garantizando una infraestructura segura y confiable. Este proyecto subraya nuestro compromiso con la salud pública y el bienestar social.",
+    "image": "../assets/projects/hospitalbanderas.jpg",
+    "alt": "Imagen del Proyecto Hospital General, Bahía de Banderas"
+  },
+  {
+    "title": "Hospital General de Zona IMSS Aguascalientes",
+    "description": "HGB Group apoyó al Hospital General de Zona del IMSS en Aguascalientes mediante el suministro de equipo eléctrico e iluminación. Este trabajo demuestra nuestra experiencia en ofrecer soluciones confiables para proyectos clave en el sector salud.",
+    "image": "../assets/projects/hospitalaguascalientes.jpg",
+    "alt": "Imagen del Proyecto Hospital General de Zona IMSS Aguascalientes"
+  },
+  {
+    "title": "CHEDRAUI",
+    "description": "Chedraui confió en HGB Group, para el suministro de equipo eléctrico en sus nuevos proyectos ubicados en Cozumel, Puerto Morelos y Playa del Carmen. Este proyecto reafirma nuestro compromiso con la excelencia y el servicio.",
+    "image": "../assets/projects/chedraui.jpg",
+    "alt": "Imagen del Proyecto CHEDRAUI"
+  },
+  {
+    "title": "Equinix",
+    "description": "HGB Group, suministró equipo eléctrico e iluminación a Equinix. Este proyecto demuestra nuestra experiencia en ofrecer soluciones especializadas para empresas líderes en infraestructura tecnológica.",
+    "image": "../assets/projects/equinix.jpg",
+    "alt": "Imagen del Proyecto Equinix"
+  },
+  {
+    "title": "Maxitunel Acapulco",
+    "description": "En el Maxitunel de Acapulco, HGB Group se encargó del suministro de equipo eléctrico e iluminación, reafirmando nuestro compromiso con la calidad en proyectos de infraestructura clave.",
+    "image": "../assets/projects/maxitunelacapulco.jpg",
+    "alt": "Imagen del Proyecto Maxitunel Acapulco"
+  }
+]
