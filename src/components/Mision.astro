@@ -11,22 +11,26 @@
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Misión -->
-      <div class="p-8 bg-white shadow rounded">
-        <h3 class="text-2xl font-semibold mb-4 text-[var(--color-primary-500)]">
+      <div class="p-8 md:p-10 lg:p-12 bg-white shadow rounded">
+        <h3
+          class="text-2xl md:text-3xl font-semibold mb-4 text-[var(--color-primary-500)]"
+        >
           Misión
         </h3>
-        <p class="text-lg text-[var(--color-text-700)]">
+        <p class="text-lg md:text-xl text-[var(--color-text-700)]">
           Así mismo, HGB Group tiene como objetivo cuidar y proponer medidas en
           el cuidado del medio ambiente, así como fortalecer el crecimiento de
           la empresa y el desarrollo profesional de sus empleados.
         </p>
       </div>
       <!-- Visión -->
-      <div class="p-8 bg-white shadow rounded">
-        <h3 class="text-2xl font-semibold mb-4 text-[var(--color-primary-500)]">
+      <div class="p-8 md:p-10 lg:p-12 bg-white shadow rounded">
+        <h3
+          class="text-2xl md:text-3xl font-semibold mb-4 text-[var(--color-primary-500)]"
+        >
           Visión
         </h3>
-        <p class="text-lg text-[var(--color-text-700)]">
+        <p class="text-lg md:text-xl text-[var(--color-text-700)]">
           Ser el mayor proveedor de productos y soluciones eléctricas a nivel
           nacional e internacional. Ser reconocidos por la calidad humana y
           profesional de nuestros empleados, teniendo una conciencia ecológica
@@ -36,3 +40,17 @@
     </div>
   </div>
 </section>
+
+<style>
+  /* Se agregan estilos responsive con clamp */
+  #mision-vision h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  #mision-vision h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  #mision-vision p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+</style>

@@ -104,6 +104,19 @@ const projects = projectsData.map((project) => ({
   </div>
 </section>
 
+<style>
+  #proyectos h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  #proyectos h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  #proyectos p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+  }
+</style>
+
 <script type="module">
   const carousel = document.getElementById("projects-carousel");
   const slides = carousel.querySelectorAll(".slide");

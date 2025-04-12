@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import solucionesImg from "../assets/services/soluciones.jpg";
 import electrificacionImg from "../assets/services/servicios.jpg";
-import iluminacionImg from "../assets/services/aplicaciones.jpeg";
+import iluminacionImg from "../assets/services/aplicaciones.jpg";
 ---
 
 <section
@@ -50,38 +50,45 @@ import iluminacionImg from "../assets/services/aplicaciones.jpeg";
           Servicios de electrificación
         </h3>
         <p class="text-[var(--color-text-700)]">
-          Proporcionamos servicios desde la generación hasta la distribución terminal, abarcando proyectos de electrificación en sectores públicos y privados. Cada solución es personalizada para asegurar un suministro eléctrico inteligente y sostenible.
-      </div>
-
-      <!-- Card: Aplicaciones de iluminación -->
-      <div class="bg-white shadow rounded p-4">
-        <Image
-          src={iluminacionImg}
-          alt="Aplicaciones de iluminación"
-          class="w-full h-64 object-cover rounded shadow mb-4"
-        />
-        <h3
-          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-        >
-          Aplicaciones de iluminación
-        </h3>
-        <p class="text-[var(--color-text-700)]">
-          Desde la iluminación de oficinas hasta áreas exteriores, ofrecemos soluciones integrales que combinan diseño y funcionalidad. Nuestros sistemas garantizan el confort visual y el ahorro energético, adaptándose a diversos entornos.
+          Proporcionamos servicios desde la generación hasta la distribución
+          terminal, abarcando proyectos de electrificación en sectores públicos
+          y privados. Cada solución es personalizada para asegurar un suministro
+          eléctrico inteligente y sostenible.
         </p>
+      </div>
+        <!-- Card: Aplicaciones de iluminación -->
+        <div class="bg-white shadow rounded p-4">
+          <Image
+            src={iluminacionImg}
+            alt="Aplicaciones de iluminación"
+            class="w-full h-64 object-cover rounded shadow mb-4"
+          />
+          <h3
+            class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+          >
+            Aplicaciones de iluminación
+          </h3>
+          <p class="text-[var(--color-text-700)]">
+            Desde la iluminación de oficinas hasta áreas exteriores, ofrecemos
+            soluciones integrales que combinan diseño y funcionalidad. Nuestros
+            sistemas garantizan el confort visual y el ahorro energético,
+            adaptándose a diversos entornos.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<style>
-  .services-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-  .service-subtitle {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
-  .text-[var(--color-text-700)] {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    line-height: 1.6;
-  }
-</style>
+  <style>
+    .services-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    .service-subtitle {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+    .text-[var(--color-text-700)] {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+    }
+  </style>
+</section>
