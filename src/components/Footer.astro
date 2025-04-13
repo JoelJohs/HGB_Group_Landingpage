@@ -1,12 +1,14 @@
 ---
-
+import { Image } from "astro:assets";
+import footerLogo from "../assets/footer_logo.png";
 ---
 
 <footer class="bg-[var(--color-primary-50)] text-[var(--color-text-900)] py-6">
   <div
     class="container mx-auto flex flex-col md:flex-row items-center justify-between"
   >
-    <div class="mb-4 md:mb-0">
+    <div class="mb-4 md:mb-0 flex items-center">
+      <Image src={footerLogo} alt="Logotipo de HGB" class="mr-2 h-8 w-8" />
       <p class="font-bold text-xl">Contacto</p>
     </div>
     <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
@@ -26,6 +28,13 @@
       </div>
       <div>
         <p>&COPY; 2025 HGB Group. Todos los derechos reservados.</p>
+        <p class="text-xs opacity-20">
+          Desarrollado por: <a
+            href="https://github.com/JoelJohs"
+            target="_blank"
+            class="hover:underline">Joel Johs</a
+          >
+        </p>
       </div>
     </div>
   </div>
