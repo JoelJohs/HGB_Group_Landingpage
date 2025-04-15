@@ -36,7 +36,7 @@
 /* === Tipografía === */
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -45,5 +45,9 @@ body {
 
 //** Ajuste de scroll **//
 [id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 80px;
+}
+
+.invert {
+  filter: drop-shadow(0 0 2px white);
 }

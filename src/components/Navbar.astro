@@ -5,14 +5,16 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
 ---
 
 <nav
-  class="bg-[var(--color-background-50)] text-[var(--color-text-900)] shadow fixed top-0 inset-x-0 z-50 h-20 navbar-height"
+  id="navbar"
+  class="fixed top-0 inset-x-0 z-50 h-20 navbar-height bg-transparent text-white transition-colors duration-300"
 >
   <div class="container mx-auto flex items-center justify-between p-4 h-full">
     <a href="/">
       <img
+        id="logo"
         src={hgbLogo}
         alt="Logo HGB"
-        class="h-10 md:h-12 hover:h-14 drop-shadow-md transition-all duration-300"
+        class="h-10 md:h-12 hover:h-14 drop-shadow-md filter invert transition-all duration-300"
       />
     </a>
 
@@ -69,14 +71,6 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
           Misión y Visión
         </a>
       </li>
-      <!-- <li>
-        <a
-          href="#contacto"
-          class="inline-block hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
-        >
-          Contacto
-        </a>
-      </li> -->
       <li>
         <a
           href="#ubicacion"
@@ -97,7 +91,7 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
       <li class="w-full">
         <a
           href="#nosotros"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
         >
           Nosotros
         </a>
@@ -105,7 +99,7 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
       <li class="w-full">
         <a
           href="#proyectos"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
         >
           Proyectos destacados
         </a>
@@ -113,7 +107,7 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
       <li class="w-full">
         <a
           href="#servicios"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
         >
           Servicios
         </a>
@@ -121,23 +115,15 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
       <li class="w-full">
         <a
           href="#mision-vision"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
         >
           Misión y Visión
         </a>
       </li>
-      <!-- <li class="w-full">
-        <a
-          href="#contacto"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
-        >
-          Contacto
-        </a>
-      </li> -->
       <li class="w-full">
         <a
           href="#ubicacion"
-          class="inline-block block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
+          class="block text-2xl text-center p-4 hover:text-[var(--color-accent-500)] font-bold hover:scale-105 transform transition-transform duration-300"
         >
           Ubicación
         </a>
@@ -145,18 +131,69 @@ import closeIcon from "../assets/navbar/Cross.svg?url";
     </ul>
   </div>
 
-  <script>
-    if (typeof document !== "undefined") {
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbar = document.getElementById("navbar");
+      const logo = document.getElementById("logo");
+      const links = navbar.querySelectorAll("ul li a");
       const menuToggle = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
       const iconOpen = document.getElementById("icon-open");
       const iconClose = document.getElementById("icon-close");
+      const trigger = document.getElementById("nosotros");
+      const offset = trigger.offsetTop - navbar.offsetHeight;
 
-      menuToggle?.addEventListener("click", () => {
-        mobileMenu?.classList.toggle("hidden");
-        iconOpen?.classList.toggle("opacity-0");
-        iconClose?.classList.toggle("opacity-0");
+      // Toggle mobile icons
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        iconOpen.classList.toggle("opacity-0");
+        iconClose.classList.toggle("opacity-0");
       });
-    }
+
+      function onScroll() {
+        if (window.innerWidth < 1024) {
+          navbar.classList.remove("bg-transparent");
+          navbar.classList.add(
+            "bg-[var(--color-background-50)]",
+            "text-[var(--color-text-900)]",
+            "shadow"
+          );
+          logo.classList.remove("invert");
+          links.forEach((a) => {
+            a.classList.remove("text-white");
+            a.classList.add("text-[var(--color-text-900)]");
+          });
+        } else {
+          if (window.scrollY >= offset) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add(
+              "bg-[var(--color-background-50)]",
+              "text-[var(--color-text-900)]",
+              "shadow"
+            );
+            logo.classList.remove("invert");
+            links.forEach((a) => {
+              a.classList.remove("text-white");
+              a.classList.add("text-[var(--color-text-900)]");
+            });
+          } else {
+            navbar.classList.add("bg-transparent", "text-white");
+            navbar.classList.remove(
+              "bg-[var(--color-background-50)]",
+              "text-[var(--color-text-900)]",
+              "shadow"
+            );
+            logo.classList.add("invert");
+            links.forEach((a) => {
+              a.classList.remove("text-[var(--color-text-900)]");
+              a.classList.add("text-white");
+            });
+          }
+        }
+      }
+
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+    });
   </script>
 </nav>
