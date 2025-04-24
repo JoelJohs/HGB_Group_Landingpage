@@ -51,3 +51,31 @@ body {
 .invert {
   filter: drop-shadow(0 0 2px white);
 }
+
+/* === Component Typography Utilities === */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+/* subtítulo habitual (h3) */
+.section-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+}
+
+/* variante para subtítulos más pequeños (h4 en Ubicación) */
+.section-subtitle-sm {
+  text-align: center;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 600;
+}
+
+/* ahora maneja también alineación y espaciado */
+.section-text {
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.05em;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+}

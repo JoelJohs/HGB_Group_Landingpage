@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import hgbLogo from "../assets/about/hgb_hero_logo.png";
+import presentacionVideo from "../assets/about/presentacion.mp4";
 import member1 from "../assets/about/members/breaker_electric.png";
 import member2 from "../assets/about/members/fuse_store.png";
 import member3 from "../assets/about/members/gateway.png";
@@ -8,7 +9,7 @@ import member4 from "../assets/about/members/abv.svg";
 import member5 from "../assets/about/members/light_n.png";
 import member6 from "../assets/about/members/odosa.png";
 import member7 from "../assets/about/members/surtidora.png";
-import historia from "../assets/about/historia_experiencia.jpeg";
+import historia from "../assets/about/historia_experiencia.jpeg?url";
 ---
 
 <section
@@ -16,228 +17,225 @@ import historia from "../assets/about/historia_experiencia.jpeg";
   class="relative py-12 px-4 bg-[var(--color-background-50)] overflow-hidden"
 >
   <div class="container mx-auto">
-    <h2
-      class="about-title font-bold text-[var(--color-text-900)] mb-6 text-center"
-    >
+    <h2 class="section-title text-[var(--color-text-900)] mb-6 text-center">
       Nosotros
     </h2>
-    <div class="relative">
-      <!-- Slides wrapper con padding-bottom -->
-      <div
-        id="about-carousel"
-        class="flex transition-transform duration-500 pb-8"
+
+    <!-- ¿Quiénes somos? card -->
+    <div class="p-8 bg-white shadow rounded-[5px] mb-8">
+      <h3
+        class="section-subtitle text-[var(--color-primary-500)] mb-4 text-center"
       >
-        <!-- Slide 1: ¿Quiénes somos? -->
-        <div class="slide flex-none w-full p-4">
-          <div
-            class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row items-center md:gap-8 md:h-[450px]"
+        ¿Quiénes somos?
+      </h3>
+      <div
+        class="flex flex-col md:flex-row items-center justify-center md:gap-8"
+      >
+        <div class="md:w-1/2 flex flex-col items-center justify-center">
+          <div class="w-full max-w-[200px] mb-4">
+            <Image
+              src={hgbLogo}
+              alt="Logo HGB"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <p class="section-text">
+            HGB Group está conformado por siete empresas que ofrecen soluciones
+            eléctricas e iluminación. Operamos con marcas de distribución
+            directa, garantizando soporte técnico eficiente y personalizado a
+            nuestros clientes.
+          </p>
+        </div>
+        <div
+          class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
+        >
+          <video
+            src={presentacionVideo}
+            controls
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-contain"></video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slides wrapper con padding-bottom -->
+    <div id="about-carousel" class="min-h-[450px] relative pb-8">
+      <!-- Slide 1: Miembros -->
+      <div class="slide p-4">
+        <div
+          class="p-8 bg-white shadow rounded flex flex-col items-center md:h-[450px]"
+        >
+          <h3
+            class="section-subtitle text-[var(--color-primary-500)] mb-4 text-center"
           >
-            <!-- Texto centrado verticalmente -->
-            <div class="md:w-1/2 flex flex-col justify-center">
-              <h3
-                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
+            Miembros
+          </h3>
+          <!-- Mobile -->
+          <div class="md:hidden space-y-4 w-full">
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
               >
-                ¿Quiénes somos?
-              </h3>
-              <p class="about-text text-[var(--color-text-700)]">
-                HGB Group está conformado por siete empresas que ofrecen
-                soluciones eléctricas e iluminación. Operamos con marcas de
-                distribución directa, garantizando soporte técnico eficiente y
-                personalizado a nuestros clientes.
-              </p>
-            </div>
-            <!-- Imagen en contenedor full‑height y centrada -->
-            <div
-              class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
-            >
-              <div class="w-full max-w-[350px] h-full">
                 <Image
-                  src={hgbLogo}
-                  alt="¿Quiénes somos?"
+                  src={member1}
+                  alt="Miembro 1"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
+              >
+                <Image
+                  src={member2}
+                  alt="Miembro 2"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
+              >
+                <Image
+                  src={member3}
+                  alt="Miembro 3"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
+              >
+                <Image
+                  src={member4}
+                  alt="Miembro 4"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
+              >
+                <Image
+                  src={member5}
+                  alt="Miembro 5"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
+              >
+                <Image
+                  src={member6}
+                  alt="Miembro 6"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow col-span-2"
+              >
+                <Image
+                  src={member7}
+                  alt="Miembro 7"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Desktop -->
+          <div class="hidden md:block w-full">
+            <div class="flex flex-wrap justify-between gap-4">
+              <div
+                class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member1}
+                  alt="Miembro 1"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member2}
+                  alt="Miembro 2"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member3}
+                  alt="Miembro 3"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member4}
+                  alt="Miembro 4"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member5}
+                  alt="Miembro 5"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member6}
+                  alt="Miembro 6"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div
+                class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
+              >
+                <Image
+                  src={member7}
+                  alt="Miembro 7"
                   class="w-full h-full object-contain"
                 />
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Slide 2: Miembros -->
-        <div class="slide flex-none w-full p-4">
-          <div
-            class="p-8 bg-white shadow rounded flex flex-col items-center md:h-[450px]"
-          >
-            <h3
-              class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-4 text-center"
-            >
-              Miembros
+      <!-- Slide 2: Historia -->
+      <div class="slide p-4 hidden">
+        <div
+          class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row items-center md:h-[450px]"
+        >
+          <div class="md:w-1/2 flex flex-col justify-center">
+            <h3 class="section-subtitle text-[var(--color-primary-500)] mb-2">
+              Historia y experiencia
             </h3>
-            <!-- Mobile -->
-            <div class="md:hidden space-y-4 w-full">
-              <div class="grid grid-cols-2 gap-4">
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member1}
-                    alt="Miembro 1"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member2}
-                    alt="Miembro 2"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member3}
-                    alt="Miembro 3"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member4}
-                    alt="Miembro 4"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member5}
-                    alt="Miembro 5"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow"
-                >
-                  <Image
-                    src={member6}
-                    alt="Miembro 6"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="h-24 flex items-center justify-center p-2 bg-gray-50 rounded-[5px] shadow col-span-2"
-                >
-                  <Image
-                    src={member7}
-                    alt="Miembro 7"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Desktop -->
-            <div class="hidden md:block w-full">
-              <div class="flex flex-wrap justify-between gap-4">
-                <div
-                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member1}
-                    alt="Miembro 1"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member2}
-                    alt="Miembro 2"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[30%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member3}
-                    alt="Miembro 3"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member4}
-                    alt="Miembro 4"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member5}
-                    alt="Miembro 5"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member6}
-                    alt="Miembro 6"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-                <div
-                  class="flex-1 min-w-[22%] h-32 bg-gray-50 rounded-[5px] shadow p-4"
-                >
-                  <Image
-                    src={member7}
-                    alt="Miembro 7"
-                    class="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
+            <p class="section-text">
+              Con más de 37 años en la industria eléctrica, HGB ha trabajado en
+              sectores públicos y privados, incluyendo retail, industria,
+              hospitales y más. Nuestra trayectoria respalda la calidad y
+              confianza de nuestros servicios.
+            </p>
           </div>
-        </div>
-
-        <!-- Slide 3: Historia -->
-        <div class="slide flex-none w-full p-4">
           <div
-            class="p-8 bg-white shadow rounded-[5px] flex flex-col md:flex-row items-center md:h-[450px]"
+            class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
           >
-            <div class="md:w-1/2 flex flex-col justify-center">
-              <h3
-                class="about-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-              >
-                Historia y experiencia
-              </h3>
-              <p class="about-text text-[var(--color-text-700)]">
-                Con 37 años en la industria eléctrica, HGB ha trabajado en
-                sectores públicos y privados, incluyendo retail, industria,
-                hospitales y más. Nuestra trayectoria respalda la calidad y
-                confianza de nuestros servicios.
-              </p>
-            </div>
-            <div
-              class="md:w-1/2 mt-4 md:mt-0 flex items-center justify-center h-full"
-            >
-              <div class="w-full max-w-[350px] h-full">
-                <Image
-                  src={historia}
-                  alt="Historia"
-                  class="w-full h-full object-contain"
-                />
-              </div>
+            <div class="w-4/5 h-full p-6">
+              <img
+                src={historia}
+                alt="Historia"
+                class="w-full h-full rounded-[5px] shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -256,13 +254,13 @@ import historia from "../assets/about/historia_experiencia.jpeg";
       >
         &#9654;
       </button>
+    </div>
 
-      <!-- Indicadores -->
-      <div
-        id="about-indicators"
-        class="absolute bottom-14 md:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2"
-      >
-      </div>
+    <!-- Indicadores -->
+    <div
+      id="about-indicators"
+      class="absolute bottom-14 md:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2"
+    >
     </div>
   </div>
 </section>
@@ -286,7 +284,13 @@ import historia from "../assets/about/historia_experiencia.jpeg";
   });
 
   function update() {
-    carousel.style.transform = `translateX(-${current * 100}%)`;
+    slides.forEach((slide, idx) => {
+      if (idx === current) {
+        slide.classList.remove("hidden");
+      } else {
+        slide.classList.add("hidden");
+      }
+    });
     indicators.querySelectorAll("button").forEach((btn, idx) => {
       if (idx === current) {
         btn.classList.replace("bg-gray-300", "bg-primary-500");
@@ -306,15 +310,3 @@ import historia from "../assets/about/historia_experiencia.jpeg";
 
   update();
 </script>
-
-<style>
-  .about-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-  .about-subtitle {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
-  .about-text {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-  }
-</style>

@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import footerLogo from "../assets/footer_logo.png";
+import phoneIcon from "../assets/footer/phone.svg?url";
+import emailIcon from "../assets/footer/mail.svg?url";
 ---
 
 <footer class="bg-[var(--color-primary-50)] text-[var(--color-text-900)] py-6">
@@ -9,18 +11,24 @@ import footerLogo from "../assets/footer_logo.png";
   >
     <div class="mb-4 md:mb-0 flex items-center">
       <Image src={footerLogo} alt="Logotipo de HGB" class="mr-2 h-8 w-8" />
-      <p class="font-bold text-xl">Contacto</p>
+      <p class="section-subtitle ml-2">Contacto</p>
     </div>
     <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
-      <p>
-        <span class="font-semibold">Correo:</span>
+      <p class="section-text">
+        <span class="font-medium flex items-center gap-2">
+          <img src={emailIcon} alt="Correo Icono" class="h-4 w-4" />
+          Correo:
+        </span>
         <a href="mailto:contacto@hgbgroup.com.mx" class="hover:underline">
           contacto@hgbgroup.com.mx
         </a>
       </p>
-      <p>
-        <span class="font-semibold">Teléfono:</span>
-        <a href="tel:+525554181968" class="hover:underline"> 5554181968 </a>
+      <p class="section-text">
+        <span class="font-medium flex items-center gap-2">
+          <img src={phoneIcon} alt="Teléfono Icono" class="h-4 w-4" />
+          Teléfono:
+        </span>
+        <a href="tel:+525554181968" class="hover:underline">555 418 1968</a>
       </p>
     </div>
   </div>
@@ -28,24 +36,19 @@ import footerLogo from "../assets/footer_logo.png";
     class="container mx-auto mt-6 border-t border-[var(--color-secondary-200)] pt-4"
   >
     <div
-      class="flex flex-col lg:flex-row justify-between items-center text-sm text-center lg:text-left"
+      class="flex flex-col lg:flex-row justify-between text-sm text-center lg:text-left space-y-4 lg:space-y-0 px-6 md:px-0"
     >
-      <div class="mb-2 md:mb-0">
-        <p class="font-bold">Soluciones eléctricas y de iluminación</p>
-        <p class="mt-1">
+      <div class="mb-4 lg:mb-0">
+        <p class="font-bold section-text">
+          Soluciones eléctricas y de iluminación
+        </p>
+        <p class="section-text mt-1">
           Expertos en Equipos y proyectos Eléctricos en México y Centroamérica
         </p>
       </div>
-      <div>
-        <p>&COPY; 2025 HGB Group. Todos los derechos reservados.</p>
-        <p class="text-xs opacity-20">
-          Desarrollado por: <a
-            href="https://github.com/JoelJohs"
-            target="_blank"
-            class="hover:underline">Joel Johs</a
-          >
-        </p>
-      </div>
+      <p class="section-text">
+        &copy; 2025 HGB Group. Todos los derechos reservados.
+      </p>
     </div>
   </div>
 </footer>

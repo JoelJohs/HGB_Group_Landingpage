@@ -10,9 +10,7 @@ import iluminacionImg from "../assets/services/aplicaciones.jpg";
   class="relative py-12 px-4 bg-[var(--color-background-50)]"
 >
   <div class="container mx-auto">
-    <h2
-      class="services-title font-bold text-[var(--color-text-900)] mb-6 text-center"
-    >
+    <h2 class="section-title text-[var(--color-text-900)] mb-6 text-center">
       Servicios
     </h2>
 
@@ -24,12 +22,10 @@ import iluminacionImg from "../assets/services/aplicaciones.jpg";
           alt="Soluciones eléctricas"
           class="w-full h-64 object-cover rounded shadow mb-4"
         />
-        <h3
-          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-        >
+        <h3 class="section-subtitle text-[var(--color-primary-500)] mb-2">
           Soluciones Eléctricas
         </h3>
-        <p class="text-[var(--color-text-700)]">
+        <p class="section-text">
           Ofrecemos productos como tableros de distribución, arranques y bancos
           de capacitores, asegurando la electrificación segura y eficiente de
           cualquier espacio. Cada solución está diseñada para optimizar el
@@ -44,51 +40,33 @@ import iluminacionImg from "../assets/services/aplicaciones.jpg";
           alt="Servicios de electrificación"
           class="w-full h-64 object-cover rounded shadow mb-4"
         />
-        <h3
-          class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-        >
+        <h3 class="section-subtitle text-[var(--color-primary-500)] mb-2">
           Servicios de electrificación
         </h3>
-        <p class="text-[var(--color-text-700)]">
+        <p class="section-text">
           Proporcionamos servicios desde la generación hasta la distribución
           terminal, abarcando proyectos de electrificación en sectores públicos
           y privados. Cada solución es personalizada para asegurar un suministro
           eléctrico inteligente y sostenible.
         </p>
       </div>
-        <!-- Card: Aplicaciones de iluminación -->
-        <div class="bg-white shadow rounded p-4">
-          <Image
-            src={iluminacionImg}
-            alt="Aplicaciones de iluminación"
-            class="w-full h-64 object-cover rounded shadow mb-4"
-          />
-          <h3
-            class="service-subtitle font-semibold text-[var(--color-primary-500)] mb-2"
-          >
-            Aplicaciones de iluminación
-          </h3>
-          <p class="text-[var(--color-text-700)]">
-            Desde la iluminación de oficinas hasta áreas exteriores, ofrecemos
-            soluciones integrales que combinan diseño y funcionalidad. Nuestros
-            sistemas garantizan el confort visual y el ahorro energético,
-            adaptándose a diversos entornos.
-          </p>
-        </div>
+      <!-- Card: Aplicaciones de iluminación -->
+      <div class="bg-white shadow rounded p-4">
+        <Image
+          src={iluminacionImg}
+          alt="Aplicaciones de iluminación"
+          class="w-full h-64 object-cover rounded shadow mb-4"
+        />
+        <h3 class="section-subtitle text-[var(--color-primary-500)] mb-2">
+          Aplicaciones de iluminación
+        </h3>
+        <p class="section-text">
+          Desde la iluminación de oficinas hasta áreas exteriores, ofrecemos
+          soluciones integrales que combinan diseño y funcionalidad. Nuestros
+          sistemas garantizan el confort visual y el ahorro energético,
+          adaptándose a diversos entornos.
+        </p>
       </div>
     </div>
   </div>
-
-  <style>
-    .services-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
-    .service-subtitle {
-      font-size: clamp(1.5rem, 4vw, 2rem);
-    }
-    .text-[var(--color-text-700)] {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.6;
-    }
-  </style>
 </section>
